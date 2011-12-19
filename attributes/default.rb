@@ -13,3 +13,9 @@ default.pennyworth.ephemeral_volume_group = "ephemeral"
 default.pennyworth.ephemeral_logical_volume = "storage"
 default.pennyworth.lv_path = File.join("/dev", "mapper", "#{pennyworth.ephemeral_volume_group}-#{pennyworth.ephemeral_logical_volume}")
 default.pennyworth.data_bag = "pennyworth"
+
+normal['jenkins']['mirror'] = 'http://mirrors.jenkins-ci.org'
+normal['jenkins']['package_url'] = 'http://pkg.jenkins-ci.org'
+normal['jenkins']['iptables_allow'] = 'disable'
+normal['jenkins']['http_proxy']['basic_auth_username'] = 'jenkins'
+normal['jenkins']['http_proxy']['basic_auth_password'] = 'jenkins'
